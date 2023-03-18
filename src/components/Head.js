@@ -29,6 +29,8 @@ const Head = () => {
     const data = await fetch(YOUTUBE_SEARCH_API + searchQuery, {
       mode: "no-cors",
       headers: {
+        "Access-Control-Allow-Origin": "*",
+
         "Sec-Fetch-Mode": "cors",
       },
     });
