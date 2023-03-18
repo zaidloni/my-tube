@@ -26,7 +26,11 @@ const Head = () => {
 
   const getSearchSuggestions = async () => {
     // console.log(searchQuery);
-    const data = await fetch(YOUTUBE_SEARCH_API + searchQuery);
+    const data = await fetch(YOUTUBE_SEARCH_API + searchQuery, {
+      headers: {
+        "Sec-Fetch-Mode": "cors",
+      },
+    });
     const json = await data.json();
     // console.log(json);
     setSuggestions(json[1]);
