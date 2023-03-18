@@ -10,6 +10,7 @@ const VideoContainer = () => {
   }, []);
   const getVideos = async () => {
     const data = await fetch(YOUTUBE_VIDEOS_API, {
+      mode: "no-cors",
       headers: {
         "Sec-Fetch-Mode": "cors",
       },
